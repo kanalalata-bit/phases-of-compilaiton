@@ -1,0 +1,152 @@
+# ==========================================================
+# LANGUAGE PROCESSING SYSTEM SIMULATOR
+# Example : Addition of Two Numbers
+# ==========================================================
+
+import os
+
+def pause():
+    input("\nPress Enter to continue...")
+
+def clear():
+    os.system("cls" if os.name == "nt" else "clear")
+
+clear()
+
+print("=" * 65)
+print("        LANGUAGE PROCESSING SYSTEM SIMULATOR")
+print("=" * 65)
+
+# ------------------ USER INPUT ------------------
+
+print("\nEnter Two Numbers")
+
+a = int(input("First Number  : "))
+b = int(input("Second Number : "))
+
+# ------------------ STEP 1 ------------------
+
+pause()
+clear()
+
+print("=" * 65)
+print("STEP 1 : SOURCE PROGRAM")
+print("=" * 65)
+
+print(f"""
+#include <stdio.h>
+
+int main()
+{{
+    int a = {a};
+    int b = {b};
+    int sum;
+
+    sum = a + b;
+
+    printf("Sum = %d", sum);
+
+    return 0;
+}}
+""")
+
+# ------------------ STEP 2 ------------------
+
+pause()
+clear()
+
+print("=" * 65)
+print("STEP 2 : PREPROCESSOR")
+print("=" * 65)
+
+print("Processing #include <stdio.h>")
+print("Including Standard Library")
+print("No Macros Found")
+print("\nPreprocessing Completed Successfully")
+
+# ------------------ STEP 3 ------------------
+
+pause()
+clear()
+
+print("=" * 65)
+print("STEP 3 : COMPILER")
+print("=" * 65)
+
+print("Converting High Level Language into Assembly Language\n")
+
+print(f"MOV R1,{a}")
+print(f"MOV R2,{b}")
+print("ADD R3,R1,R2")
+print("PRINT R3")
+print("HALT")
+
+# ------------------ STEP 4 ------------------
+
+pause()
+clear()
+
+print("=" * 65)
+print("STEP 4 : ASSEMBLER")
+print("=" * 65)
+
+print("Converting Assembly Language into Machine Code\n")
+
+print("10100001")
+print("10100010")
+print("11100011")
+print("11000011")
+print("11111111")
+
+# ------------------ STEP 5 ------------------
+
+pause()
+clear()
+
+print("=" * 65)
+print("STEP 5 : LINKER")
+print("=" * 65)
+
+print("Object File Created")
+print("Linking printf() Library")
+print("Generating sum.exe")
+
+# ------------------ STEP 6 ------------------
+
+pause()
+clear()
+
+print("=" * 65)
+print("STEP 6 : LOADER")
+print("=" * 65)
+
+print("Loading sum.exe into RAM")
+print("Allocating Memory")
+print("CPU is Ready")
+
+# ------------------ STEP 7 ------------------
+
+pause()
+clear()
+
+print("=" * 65)
+print("STEP 7 : EXECUTION")
+print("=" * 65)
+
+print("Instruction 1 : Load First Number =", a)
+print("Instruction 2 : Load Second Number =", b)
+
+print("\nCPU Executes")
+
+sum_value = a + b
+
+print(f"ADD {a} + {b}")
+print(f"Result = {sum_value}")
+
+print("\nPROGRAM OUTPUT")
+print("-----------------------")
+print("Sum =", sum_value)
+
+print("\n" + "=" * 65)
+print("PROGRAM EXECUTED SUCCESSFULLY")
+print("=" * 65)
